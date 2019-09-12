@@ -19,7 +19,7 @@
 
 .sidebar() {
     border-top: 1px solid #fff;
-    padding: 5% 2%git 0 0;
+    padding: 2% 2% 0 0;
     color: #fff;
     @media (max-width: 500px) {
         font-size: 1rem;
@@ -31,11 +31,11 @@
     font-family: "Rubik Mono One", sans-serif;
     font-size: 1.5rem;
     @media (max-width: 750px) {
-        font-size: 1rem;
+        font-size: 0.75rem;
         padding: 2%;
     }
     @media (max-width: 500px) {
-        background-color: white;
+        background-color: #fff;
     }
 }
 
@@ -72,7 +72,6 @@ h1 {
 
 div img {
     width: 100%;
-    padding-top: 2%;
 }
 
 header {
@@ -118,8 +117,9 @@ nav {
         justify-content: center;
         align-items: center;
         height: 100%;
-        @media (max-width: 500px) {
+        @media (max-width: 1000px) {
             justify-content: center;
+            background-color: #fff;
         }
     } // this closes the box 1
     .box2 {
@@ -139,6 +139,29 @@ nav {
 } // this closes the main-content
 
 #about {
+    display: flex;
+    .box1 {
+        .box-small();
+        justify-content: flex-end;
+        @media (max-width: 500px) {
+            justify-content: center;
+        }
+        align-items: flex-start;
+        padding: 0% 2% 0 0;
+        .sidebar();
+    } // this closes box 1
+    .box2 {
+        .box-large();
+        padding: 2%;
+        border-top: 1px solid #2f393b;
+    } // this closes box 2
+    @media (max-width: 500px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+#portfolio {
     display: flex;
     .box1 {
         .box-small();
